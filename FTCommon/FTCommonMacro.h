@@ -9,20 +9,20 @@
 #ifndef CommonMacro_h
 #define CommonMacro_h
 
-//#import <objc/runtime.h>
+#import <objc/runtime.h>
 //
 ///*   Category   */
 #import "UIView+FTView.h"
-//#import "NSString+FTString.h"
-//#import "UIFont+FTFont.h"
-//#import "UIImage+FTImage.h"
-//#import "NSObject+FTDevice.h"
-//#import "NSDate+FTDate.h"
+#import "NSString+FTString.h"
+#import "UIFont+FTFont.h"
+#import "UIImage+FTImage.h"
+#import "NSObject+FTDevice.h"
+#import "NSDate+FTDate.h"
 #import "UIViewController+FTAlertView.h"
 #import "UIColor+FTColor.h"
-//#import "UIButton+FTButton.h"
-//#import "UILabel+FTLabel.h"
-//#import "FTToast.h"
+#import "UIButton+FTButton.h"
+#import "UILabel+FTLabel.h"
+#import "FTToast.h"
 
 #define weak_Self __weak __typeof__(self) weakSelf = self;
 
