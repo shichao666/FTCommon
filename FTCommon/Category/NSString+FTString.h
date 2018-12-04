@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CommonCrypto/CommonCryptor.h>
+//#import <CommonCrypto/CommonCryptor.h>
 
 #import <UIKit/UIKit.h>
 
@@ -76,7 +76,7 @@
  *
  *  @return MD5 String
  */
-- (NSString *)MD5Digest;
+//- (NSString *)MD5Digest;
 
 /*!
  *  解析查询字符串
