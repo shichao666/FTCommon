@@ -6,7 +6,7 @@
 //
 
 #import "UIView+FTBorders.h"
-
+#import "FTCommonMacro.h"
 @implementation UIView(FTBorders)
 
 -(CALayer*)createTopBorderWithHeight: (CGFloat)height andColor:(UIColor*)color{

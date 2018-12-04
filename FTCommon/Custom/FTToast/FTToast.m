@@ -7,6 +7,7 @@
 //
 
 #import "FTToast.h"
+#import "FTCommonMacro.h"
 
 @interface FTToast()
 

@@ -8,7 +8,7 @@
 
 #import "UIView+FTView.h"
 #import "UIColor+FTColor.h"
-
+#import "FTCommonMacro.h"
 static char const * const requestFailedViewKey = "requestFailedViewKey";
 static char const * const keyAction =       "action";
 
