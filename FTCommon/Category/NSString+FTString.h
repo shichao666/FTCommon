@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCryptor.h>
+
 #import <UIKit/UIKit.h>
 
 @interface NSString (FTString)
