@@ -104,12 +104,12 @@
 + (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize;
 
 //获取学生ID
-+ (NSNumber *)getUserID;
+//+ (NSNumber *)getUserID;
 
-+ (NSString *)getAccessToken;
+//+ (NSString *)getAccessToken;
 
 //des加密解密
-+(NSString *)TripleDES:(NSString *)plainText encryptOrDecrypt:(CCOperation)encryptOrDecrypt;
+//+(NSString *)TripleDES:(NSString *)plainText encryptOrDecrypt:(CCOperation)encryptOrDecrypt;
 
 /**
  *  获取未来某个日期是星期几
