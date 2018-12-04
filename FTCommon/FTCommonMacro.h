@@ -17,7 +17,7 @@
 #import "UIFont+FTFont.h"
 #import "UIImage+FTImage.h"
 #import "NSObject+FTDevice.h"
-#import "NSDate+FTDate.h"
+//#import "NSDate+FTDate.h"
 #import "UIViewController+FTAlertView.h"
 #import "UIColor+FTColor.h"
 #import "UIButton+FTButton.h"

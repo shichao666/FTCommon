@@ -12,6 +12,6 @@ s.source_files = "FTCommon/**/*"
 
 s.source = { :git => "https://github.com/shichao666/FTCommon.git", :tag => s.version }
 s.ios.deployment_target = '8.0' 
-s.frameworks = 'UIKit' 
+s.frameworks = 'UIKit' , 'Foundation'
 s.requires_arc = true 
 end
