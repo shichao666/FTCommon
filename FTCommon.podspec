@@ -8,7 +8,7 @@ s.license= { :type => "MIT", :file => "LICENSE" }
 s.author = { "shichao666" => "329585013@qq.com" } 
 
 # /*.{h,m}
-s.source_files = "FTCommon" 
+s.source_files = "FTCommon/" 
 
 s.source = { :git => "https://github.com/shichao666/FTCommon.git", :tag => s.version }
 s.ios.deployment_target = '8.0' 
