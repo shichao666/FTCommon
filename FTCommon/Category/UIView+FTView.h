@@ -29,8 +29,6 @@
 @property (nonatomic, assign) CGFloat cornerRadius;
 
 
-@property(strong,nonatomic) UIView *requestFailedView;
-
 //- (UIView *(^)(CGRect frame))sc_frame;
 //
 //- (UIView *(^)(UIColor *color))sc_color;
@@ -60,8 +58,6 @@
 
 - (void)moveBy:(CGPoint)point;
 
-
-#warning 需要优化的地方 添加参数 错误图片 文字描述等  目前内部写死
 //添加网络请求失败界面 按钮回调   注意避免循环引用的问题
 - (void)showNetworkRequestFailedView:(void(^)(void))action;
 

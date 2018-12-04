@@ -12,7 +12,7 @@
 
 
 // 根据图片url获取图片尺寸
-+(CGSize)getImageSizeWithURL:(id)imageURL;
+//+(CGSize)getImageSizeWithURL:(id)imageURL;
 
 /* !对图片进行压缩
  *

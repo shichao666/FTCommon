@@ -18,14 +18,14 @@
  *
  *  @return 编码后的字符串
  */
-+ (NSString *)urlEncodingUTF8:(NSString *)string{
-    NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                                                     (CFStringRef)string,
-                                                                                                     NULL,
-                                                                                                     (CFStringRef)@"!*'();:@&=+$,/?%#[] ",
-                                                                                                     kCFStringEncodingUTF8));
-    return encodedString;
-}
+//+ (NSString *)urlEncodingUTF8:(NSString *)string{
+//    NSString * encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+//                                                                                                     (CFStringRef)string,
+//                                                                                                     NULL,
+//                                                                                                     (CFStringRef)@"!*'();:@&=+$,/?%#[] ",
+//                                                                                                     kCFStringEncodingUTF8));
+//    return encodedString;
+//}
 
 /**
  *  判断是否为空字符及空格
@@ -180,45 +180,45 @@
  *
  *  @return NSDictionary
  */
-+ (NSDictionary *)parseQueryString:(NSString *)query{
-    // 定义字典
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    
-    // 检测字符串中是否包含 ‘？’
-    NSRange range = [query rangeOfString:@"?"];
-    if(range.location != NSNotFound){
-        NSArray *queryArr = [query componentsSeparatedByString:@"?"];
-        [dict setObject:queryArr[0] forKey:@"url"];
-        query = queryArr[1];
-    }else{
-        // 如果一个url连 '?' 都没有，那么肯定就没有参数
-        return dict;
-    }
-    
-    // 检测字符串中是否包含 ‘&’
-    if([query rangeOfString:@"&"].location != NSNotFound){
-        // 以 & 来分割字符，并放入数组中
-        NSArray *pairs = [query componentsSeparatedByString:@"&"];
-        // 遍历字符数组
-        for (NSString *pair in pairs) {
-            // 以等号来分割字符
-            NSArray *elements = [pair componentsSeparatedByString:@"="];
-            NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            NSString *val = [[elements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            // 添加到字典中
-            [dict setObject:val forKey:key];
-        }
-    }else if([query rangeOfString:@"="].location != NSNotFound){ // 检测字符串中是否包含 ‘=’
-        NSArray *elements = [query componentsSeparatedByString:@"="];
-        NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSString *val = [[elements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        // 添加到字典中
-        [dict setObject:val forKey:key];
-    }
-    
-    NSLog(@"dict -> %@", dict);
-    return dict;
-}
+//+ (NSDictionary *)parseQueryString:(NSString *)query{
+//    // 定义字典
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//    
+//    // 检测字符串中是否包含 ‘？’
+//    NSRange range = [query rangeOfString:@"?"];
+//    if(range.location != NSNotFound){
+//        NSArray *queryArr = [query componentsSeparatedByString:@"?"];
+//        [dict setObject:queryArr[0] forKey:@"url"];
+//        query = queryArr[1];
+//    }else{
+//        // 如果一个url连 '?' 都没有，那么肯定就没有参数
+//        return dict;
+//    }
+//    
+//    // 检测字符串中是否包含 ‘&’
+//    if([query rangeOfString:@"&"].location != NSNotFound){
+//        // 以 & 来分割字符，并放入数组中
+//        NSArray *pairs = [query componentsSeparatedByString:@"&"];
+//        // 遍历字符数组
+//        for (NSString *pair in pairs) {
+//            // 以等号来分割字符
+//            NSArray *elements = [pair componentsSeparatedByString:@"="];
+//            NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//            NSString *val = [[elements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//            // 添加到字典中
+//            [dict setObject:val forKey:key];
+//        }
+//    }else if([query rangeOfString:@"="].location != NSNotFound){ // 检测字符串中是否包含 ‘=’
+//        NSArray *elements = [query componentsSeparatedByString:@"="];
+//        NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        NSString *val = [[elements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        // 添加到字典中
+//        [dict setObject:val forKey:key];
+//    }
+//    
+//    NSLog(@"dict -> %@", dict);
+//    return dict;
+//}
 
 /**
  *  竖排字符串
@@ -282,10 +282,10 @@
     return  [self weekdayStringFromDate:endDate];
     
     // 判断当前日期 和 未来某个时刻日期 相差的天数
-    long days = [self daysFromDate:[NSDate date] toDate:endDate];
+//    long days = [self daysFromDate:[NSDate date] toDate:endDate];
     // 将总天数 换算为 以 周 计算（假如 相差10天，其实就是等于 相差 1周零3天，只需要取3天，更加方便计算）
-    long day = days >= 7 ? days % 7 : days;
-    long week = [self getNowWeekday] + day;
+//    long day = days >= 7 ? days % 7 : days;
+//    long week = [self getNowWeekday] + day;
     //    switch (week) {
     //        case 1:
     //            return languageString(@"星期天");
@@ -359,17 +359,17 @@
 }
 
 // 获取当前是星期几
-- (NSInteger)getNowWeekday {
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *comps = [[NSDateComponents alloc] init];
-    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit |
-    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDate *now = [NSDate date];
-    // 话说在真机上需要设置区域，才能正确获取本地日期，天朝代码:zh_CN
-    calendar.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
-    comps = [calendar components:unitFlags fromDate:now];
-    return [comps weekday];
-}
+//- (NSInteger)getNowWeekday {
+//    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+//    NSDateComponents *comps = [[NSDateComponents alloc] init];
+//    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit |
+//    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+//    NSDate *now = [NSDate date];
+//    // 话说在真机上需要设置区域，才能正确获取本地日期，天朝代码:zh_CN
+//    calendar.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+//    comps = [calendar components:unitFlags fromDate:now];
+//    return [comps weekday];
+//}
 
 + (NSString *)hexStringFromString:(NSString *)string {
     

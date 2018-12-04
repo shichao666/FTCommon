@@ -19,7 +19,7 @@
  *
  *  @return 编码后的字符串
  */
-+ (NSString *)urlEncodingUTF8:(NSString *)string;
+//+ (NSString *)urlEncodingUTF8:(NSString *)string;
 
 /**
  *  判断是否为空字符及空格
@@ -85,7 +85,7 @@
  *
  *  @return NSDictionary
  */
-+ (NSDictionary *)parseQueryString:(NSString *)query;
+//+ (NSDictionary *)parseQueryString:(NSString *)query;
 
 /**
  *  竖排字符串
