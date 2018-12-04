@@ -12,14 +12,14 @@
 //#import <objc/runtime.h>
 //
 ///*   Category   */
-//#import "UIView+FTView.h"
+#import "UIView+FTView.h"
 //#import "NSString+FTString.h"
 //#import "UIFont+FTFont.h"
 //#import "UIImage+FTImage.h"
 //#import "NSObject+FTDevice.h"
 //#import "NSDate+FTDate.h"
 #import "UIViewController+FTAlertView.h"
-//#import "UIColor+FTColor.h"
+#import "UIColor+FTColor.h"
 //#import "UIButton+FTButton.h"
 //#import "UILabel+FTLabel.h"
 //#import "FTToast.h"

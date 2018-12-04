@@ -1,6 +1,6 @@
 Pod::Spec.new do |s| 
 s.name = "FTCommon" 
-s.version = "1.1.3"
+s.version = "1.1.4"
 s.summary = "福田iOS-APP公共模块 第一版"
 s.description = "福田iOS-APP公共模块 第一版."
 s.homepage = "https://github.com/shichao666/FTCommon" 
