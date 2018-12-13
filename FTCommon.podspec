@@ -1,6 +1,6 @@
 Pod::Spec.new do |s| 
 s.name = "FTCommon" 
-s.version = "1.1.20"
+s.version = "1.1.21"
 s.summary = "福田iOS-APP公共模块 第一版"
 s.description = "福田iOS-APP公共模块 第一版."
 s.homepage = "https://github.com/shichao666/FTCommon" 
@@ -12,7 +12,7 @@ s.source = { :git => "https://github.com/shichao666/FTCommon.git", :tag => s.ver
 
 # /*.{h,m}
 # /**/*
-s.source_files = "FTCommon/**/*"
+s.source_files = "FTCommon/*"
 
 # s.subspec 'FTCategory' do |category|
 # category.source_files = "FTCommon/Category/**/*"
